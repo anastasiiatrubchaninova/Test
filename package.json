@@ -27,6 +27,7 @@
     "@angular/cli": "~14.1.2",
     "@angular/compiler-cli": "^14.1.0",
     "@types/jasmine": "~4.0.0",
+    "cy-verify-downloads": "^0.1.13",
     "cypress": "^12.8.1",
     "jasmine-core": "~4.2.0",
     "karma": "~6.4.0",

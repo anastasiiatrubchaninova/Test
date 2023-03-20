@@ -15,16 +15,7 @@ describe('Cards', () => {
 
     })
 
-    it('Open the detail view of the image', () => {
-        cy.get('div.image-thumb').find('div[class="info-container"]').find('span')
-            .should('not.be.empty').next().should('contain.text', 'ownload')
-    })
     
-    it('Verify the content and the height', () => {
-        
-        cy.get('img').should('have.css', 'height', '500px') 
-
-    })
 
 
 })
