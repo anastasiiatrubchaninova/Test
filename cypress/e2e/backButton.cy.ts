@@ -1,5 +1,4 @@
-import { first } from "cypress/types/lodash"
-describe('Cards', () => {
+describe('Back', () => {
     beforeEach(() => {
         cy.visit('/')
         cy.get('div.image-thumb').first().click()
