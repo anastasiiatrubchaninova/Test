@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-03-20T18:54:18.012Z",
+    "end": "2023-03-20T18:54:23.582Z",
+    "duration": 5570,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ac0c69d3-61a9-4310-9f1a-5c4e33bd7e26",
+      "title": "",
+      "fullFile": "cypress/e2e/galleryView.cy.ts",
+      "file": "cypress/e2e/galleryView.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3065d075-cc17-420d-b87f-b8a3521dfb4a",
+          "title": "Gallery view",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Open start page",
+              "fullTitle": "Gallery view Open start page",
+              "timedOut": null,
+              "duration": 5506,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Pictures (30)').should('be.visible');\ncy.get('div.image-thumb').as('imageThumbnail');\ncy.get('@imageThumbnail').should('have.length', 30);\ncy.get('img').each((image) => {\n    cy.wrap(image).should('have.css', 'height', '200px');\n    cy.get('@imageThumbnail').find('div.info-container').as('infoContainer').find('span')\n        .should('not.be.empty').next().should('contain.text', 'Download');\n    cy.get('@infoContainer').eq(imageWithNoDownload).find('span')\n        .should('not.be.empty').next().should('contain.text', 'no download');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<span.button.download>' to contain text 'no download', but the text was 'Download'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<span.button.download>' to contain text 'no download', but the text was 'Download'\n    at Context.eval (webpack:///./cypress/e2e/galleryView.cy.ts:16:47)",
+                "diff": "- 'Download'\n+ 'no download'\n"
+              },
+              "uuid": "a75588ad-a349-47b9-81f1-e92a45a23123",
+              "parentUUID": "3065d075-cc17-420d-b87f-b8a3521dfb4a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a75588ad-a349-47b9-81f1-e92a45a23123"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5506,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}

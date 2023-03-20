@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-03-20T18:51:46.392Z",
+    "end": "2023-03-20T18:51:52.057Z",
+    "duration": 5665,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "18a80bfa-0622-4f06-a8b8-6b4fd512829c",
+      "title": "",
+      "fullFile": "cypress/e2e/detailViiew.cy.ts",
+      "file": "cypress/e2e/detailViiew.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "658474ab-3b7f-46da-bf58-a50dcdf3e6ec",
+          "title": "Detail",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Detail view",
+              "fullTitle": "Detail Detail view",
+              "timedOut": null,
+              "duration": 5572,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@imageThumbnail').should('have.length', 1);\ncy.get('@imageThumbnail').find('div[class=\"info-container\"]').find('span')\n    .first().should(\"have.text\", \"1) Alejandro Escamilla\").next()\n    .should('have.text', 'Download');\ncy.contains(\"Back\").should('be.visible');\ncy.get('img').should('have.attr', 'src', 'https://picsum.photos/id/0/5000/3333');\ncy.get('img').should('have.css', 'height', '500px');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<span>' to have text '1) Alejandro Escamilla', but the text was '-1) Alejandro Escamilla'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<span>' to have text '1) Alejandro Escamilla', but the text was '-1) Alejandro Escamilla'\n    at Context.eval (webpack:///./cypress/e2e/detailViiew.cy.ts:14:21)",
+                "diff": "- '-1) Alejandro Escamilla'\n+ '1) Alejandro Escamilla'\n"
+              },
+              "uuid": "add4afd5-79b0-4b46-8675-cfa3a45aa408",
+              "parentUUID": "658474ab-3b7f-46da-bf58-a50dcdf3e6ec",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "add4afd5-79b0-4b46-8675-cfa3a45aa408"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5572,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}
