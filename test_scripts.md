@@ -7,28 +7,27 @@ Then:
 - Every card has a number, the author name and the  "Download" button/”no download” message
 - The correct order is: number, author, button/message
 - The numbers go sequentially  
-- if the image has at least 4 Megapixel (4 x 106 pixel) and the width, respectively height have min 2000px then the download link is active
+- If the image has at least 4 Megapixel (4 x 106 pixel) and the width, respectively height have min 2000px then the download link is active
 # Detail view
 Given: user is on start page  
 When: user clicks on the image card  
 Then:
--  the detail view of the image is opened (other cards are not shown)
+-  The detail view of the image is opened (other cards are not shown)
 - The card has a number, the author name and button "Download"/”no download” message (all is visible)
 - The correct order is: number, author, button/message
 - The author's name and a number are the same as on the start page
 - Text "Back" is visible
-- The detail view will display the same content card as on the start page
-- an expanded image (height 500px)
+- The same image display as on the start page (height 500)
 # Back button
-Given: user is on the image card  
-When: user clicks on the button "Back"   
-Then: start page is displayed
+Given: User is on the image card  
+When: User clicks on the button "Back"   
+Then: Start page is displayed
 
 # Dowlonding from gallery
-Given: user is on start page   
-When: user clicks on the button "Download"     
-Then: image is downloaded
+Given: User is on start page   
+When: User clicks on the button "Download"     
+Then: Image is downloaded
 # Dowlonding from detail view
-Given: user is on the  image card   
-When: user clicks on the button "Download"   
-Then: image is downloaded
+Given: User is on the  image card   
+When: User clicks on the button "Download"   
+Then: Image is downloaded
