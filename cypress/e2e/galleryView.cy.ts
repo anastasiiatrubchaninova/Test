@@ -2,7 +2,7 @@ import { first } from "cypress/types/lodash"
 
 describe('Gallery view', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:4200/')
+        cy.visit('/')
     })
     it('Open start page', () => {
         cy.contains('Pictures (30)').should('be.visible')
