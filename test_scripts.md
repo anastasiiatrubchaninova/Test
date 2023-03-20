@@ -23,11 +23,11 @@ Given: User is on the image card
 When: User clicks on the button "Back"   
 Then: Start page is displayed
 
-# Dowlonding from gallery
+# Downlonding from gallery
 Given: User is on start page   
 When: User clicks on the button "Download"     
 Then: Image is downloaded
-# Dowlonding from detail view
+# Downlonding from detail view
 Given: User is on the  image card   
 When: User clicks on the button "Download"   
 Then: Image is downloaded
