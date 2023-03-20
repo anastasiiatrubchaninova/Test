@@ -2,10 +2,8 @@ import { first } from "cypress/types/lodash"
 
 describe('Gallery view', () => {
     beforeEach(() => {
-
         cy.visit('http://localhost:4200/')
     })
-
     it('Open start page', () => {
         cy.contains('Pictures (30)').should('be.visible')
         cy.get('div.image-thumb').as('imageThumbnail')
@@ -14,7 +12,6 @@ describe('Gallery view', () => {
             cy.wrap(image).should('have.css', 'height', '200px')
             cy.get('@imageThumbnail').find('div[class="info-container"]').find('span')
                 .should('not.be.empty').next().should('contain.text', 'Download')
-
             cy.get('@imageThumbnail').find('div[class="info-container"]').eq(13).find('span')
                 .should('not.be.empty').next().should('contain.text', 'no download')
         })

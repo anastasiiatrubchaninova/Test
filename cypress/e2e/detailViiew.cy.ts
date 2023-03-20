@@ -19,10 +19,4 @@ describe('Cards', () => {
         cy.get('img').should('have.attr', 'src', 'https://picsum.photos/id/0/5000/3333')
         cy.get('img').should('have.css', 'height', '500px')
     })
-
-
-
-
-
-
 })
