@@ -1,7 +1,7 @@
 import { first } from "cypress/types/lodash"
 describe('Cards', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:4200/')
+        cy.visit('/')
         cy.get('div.image-thumb').first().click()
     })
 
