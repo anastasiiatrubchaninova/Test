@@ -1,5 +1,3 @@
-import { first } from "cypress/types/lodash"
-
 describe('Download link', () => {
     beforeEach(() => {
         cy.visit('/')

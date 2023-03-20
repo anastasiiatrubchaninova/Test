@@ -1,6 +1,4 @@
-import { first } from "cypress/types/lodash"
-
-describe('Cards', () => {
+describe('Detail', () => {
     beforeEach(() => {
 
         cy.visit('/')
@@ -9,7 +7,7 @@ describe('Cards', () => {
 
     })
 
-    it('Click on the button "Back"', () => {
+    it('Detail view', () => {
 
         cy.get('@imageThumbnail').should('have.length', 1)
         cy.get('@imageThumbnail').find('div[class="info-container"]').find('span')
