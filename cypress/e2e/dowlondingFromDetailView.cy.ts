@@ -8,16 +8,14 @@ describe('Download link', () => {
 
     })
 
-   
+
 
     it('Download from the detail view of the image ', () => {
         cy.contains('Download').click();
         cy.readFile('cypress/downloads/img.jpg')
-
-        
     })
-    
-   
+
+
 
 
 })
